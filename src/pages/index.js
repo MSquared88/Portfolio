@@ -11,8 +11,8 @@ const IndexPage = () => (
   <Layout>
     <Header />
     <Landing />
-    <About />
     <Projects />
+    <About />
     <Writing />
     <Footer />
   </Layout>
