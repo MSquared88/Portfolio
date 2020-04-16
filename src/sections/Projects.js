@@ -20,12 +20,12 @@ const Background = () => (
       invertY
     />
 
-    <Triangle
+    {/* <Triangle
       color="primaryDark"
       height={['20vh', '40vh']}
       width={['75vw', '70vw']}
       invertX
-    />
+    /> */}
 
     <Triangle
       color="backgroundDark"
@@ -35,7 +35,7 @@ const Background = () => (
   </div>
 );
 
-const CARD_HEIGHT = '200px';
+const CARD_HEIGHT = '250px';
 
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
@@ -48,6 +48,8 @@ const Title = styled(Text)`
 `;
 
 const TextContainer = styled.div`
+  background: black;
+  color: white;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -61,7 +63,8 @@ const TextContainer = styled.div`
 
 const ImageContainer = styled.div`
   margin: auto;
-  width: ${CARD_HEIGHT};
+  background: black;
+  height: ${CARD_HEIGHT};
 
   ${MEDIA_QUERY_SMALL} {
     width: calc(${CARD_HEIGHT} / 2);
@@ -83,6 +86,7 @@ const ProjectImage = styled(Image)`
 `;
 
 const ProjectTag = styled.div`
+  color: white;
   position: relative;
   height: ${CARD_HEIGHT};
   top: calc(

@@ -11,29 +11,29 @@ import markdownRenderer from '../components/MarkdownRenderer';
 const Background = () => (
   <div>
     <Triangle
-      color="secondaryLight"
+      color="black"
       height={['80vh', '80vh']}
       width={['100vw', '100vw']}
       invertX
     />
 
     <Triangle
-      color="background"
+      color="backgroundDark"
       height={['50vh', '20vh']}
       width={['50vw', '50vw']}
       invertX
     />
 
-    <Triangle
+    {/* <Triangle
       color="primaryDark"
       height={['25vh', '40vh']}
       width={['75vw', '60vw']}
       invertX
       invertY
-    />
+    /> */}
 
     <Triangle
-      color="backgroundDark"
+      color="secondaryLight"
       height={['25vh', '20vh']}
       width={['100vw', '100vw']}
       invertY
@@ -76,7 +76,7 @@ const About = () => (
       render={data => {
         const { aboutMe, profile } = data.contentfulAbout;
         return (
-          <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+          <Flex justifyContent="center" alignItems="center" flexWrap="wrap" style={{fontSize: '1.4rem', color: 'white'}}>
             <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
               <Fade bottom>
                 <ReactMarkdown
@@ -86,7 +86,7 @@ const About = () => (
               </Fade>
             </Box>
 
-            <Box
+            {/* <Box
               width={[1, 1, 2 / 6]}
               style={{ maxWidth: '300px', margin: 'auto' }}
             >
@@ -98,7 +98,7 @@ const About = () => (
                   ml={[0, 0, 1]}
                 />
               </Fade>
-            </Box>
+            </Box> */}
           </Flex>
         );
       }}
