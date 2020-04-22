@@ -17,13 +17,13 @@ const Background = () => (
     />
 
     <Triangle
-      color="secondary"
+      color="primaryDark"
       height={['38vh', '80vh']}
       width={['50vw', '35vw']}
     />
 
     <Triangle
-      color="primaryDark"
+      color="secondary"
       height={['25vh', '35vh']}
       width={['75vw', '60vw']}
       invertX
@@ -76,7 +76,7 @@ const LandingPage = () => (
               fontSize={[5, 6, 8]}
               mb={[3, 4, 5]}
             >
-              {`Hello, I'm ${name}!`}
+              {`Hello, I'm Matthew`}
             </Heading>
 
             <Heading
@@ -105,7 +105,7 @@ const LandingPage = () => (
                 </Box>
               ))}
             </Flex>
-            <SectionLink section="about">
+            <SectionLink section="projects">
               {({ onClick }) => <MouseIcon onClick={onClick} />}
             </SectionLink>
           </Fragment>

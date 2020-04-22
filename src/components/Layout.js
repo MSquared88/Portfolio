@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
   body {
+    background: #262626;
     box-sizing: border-box; 
     margin: 0;
     font-family: Cabin, 'Open Sans', sans-serif;
