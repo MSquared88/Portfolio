@@ -40,7 +40,7 @@ const Header = () => (
     <Fade top>
       <Flex
         flexWrap="wrap"
-        justifyContent="space-between"
+        justifyContent="flex-end"
         alignItems="center"
         p={3}
       >

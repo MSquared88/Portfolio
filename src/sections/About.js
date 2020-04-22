@@ -32,12 +32,12 @@ const Background = () => (
       invertY
     /> */}
 
-    <Triangle
+    {/* <Triangle
       color="secondaryLight"
       height={['25vh', '20vh']}
       width={['100vw', '100vw']}
       invertY
-    />
+    /> */}
 
 
   </div>
@@ -76,7 +76,7 @@ const About = () => (
       render={data => {
         const { aboutMe, profile } = data.contentfulAbout;
         return (
-          <Flex justifyContent="center" alignItems="center" flexWrap="wrap" style={{fontSize: '1.4rem', color: 'white'}}>
+          <Flex justifyContent="center" alignItems="center" flexWrap="wrap" style={{fontSize: '1.4rem', color: 'white', background: 'rgb(0,0,0,0.8)', borderRadius: '20px', border: 'solid 1px #3399ff'}}>
             <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
               <Fade bottom>
                 <ReactMarkdown
