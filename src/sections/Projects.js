@@ -53,7 +53,6 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  width: 100%;
   width: calc(100% - ${CARD_HEIGHT});
 
   ${MEDIA_QUERY_SMALL} {
@@ -106,6 +105,7 @@ const Project = ({
   type,
   publishedDate,
   logo,
+  accomplishments
 }) => (
   <Card p={0}>
     <Flex style={{ height: CARD_HEIGHT }}>
@@ -117,6 +117,16 @@ const Project = ({
         </span>
         <Text width={[1]} style={{ overflow: 'auto' }}>
           {description}
+          <p></p>
+          {accomplishments.map(item => {
+            return(
+              <Text>
+                {item}
+                <p></p>
+              </Text>
+            
+            ) 
+          })}
         </Text>
       </TextContainer>
 
@@ -185,6 +195,7 @@ const Projects = () => (
               repositoryUrl
               publishedDate(formatString: "YYYY")
               type
+              accomplishments
               logo {
                 title
                 image: resize(width: 200, quality: 100) {
@@ -196,7 +207,7 @@ const Projects = () => (
         }
       `}
       render={({ contentfulAbout }) => (
-        <CardContainer minWidth="350px">
+        <CardContainer minWidth="500px">
           {contentfulAbout.projects.map((p, i) => (
             <Fade bottom delay={i * 200} key={p.id}>
               <Project {...p} />
